@@ -1,0 +1,8 @@
+
+q.3 )
+update Marks SET Module3=60 WHERE StudNo = 1004;
+select * from marks where StudNo = 1004;
+
+Q.2 A) 
+select STUDNO AS "Student no." ,STUDNAME AS "NAME" ,DEPTNO AS "DEPARTMENT NO" FROM student FROM Student NATURAL JOIN Marks
+WHERE (Module1 IS NULL) OR (Module2 IS NULL) OR (Module3 IS NULL) OR (Module4 IS NULL) OR (Module5 IS NULL) 

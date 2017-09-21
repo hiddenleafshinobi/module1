@@ -1,0 +1,90 @@
+<html>
+   <head>
+      <title>Customer Incident Form</title>
+	  <script src="script/n.js"></script>
+	  <link href="css/customer.css" rel="stylesheet"/> 
+	  
+   </head>
+   <body>
+   <h1 >Customer Incident Form</h1>
+  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  We appriciate your business and want to hear about your experience during your visit
+   <form method="post" >
+     <table align="center" width="90%">
+        <tr >
+		      <td class="left"> Name </td>
+			  <td>
+			      <input type="text" name="txtN" size="40" required autofocus maxlength="20"
+				  id="txtN" placeholder="Enter Your Name"/>
+			  </td>
+		  </tr>	
+		 
+		 <tr>
+		      <td class="left"> Address </td>
+			  <td>
+			      <textarea row="25" cols="40" name="txtAdd" required 
+				  id="txtAdd" placeholder="Enter Your Address">
+				  </textarea>
+			  </td>
+		 </tr> 
+		 
+		 <tr>
+			  <td class="left"> State</td>
+			  <td class="left">
+			      <select name= "ddlstate">
+				  <option selected Value="select"></option>
+				  <option  value="Bangalore-560000">Karnataka-KA</option>
+				  <option value="Chennai-600000">Tamilnadu-MAS</option>
+				  <option value="Thiruvananthapuram-680000">Kerala-KL</option>
+				  <option value="Hyderabad-500000">Andhrapradesh-AP</option>
+				  </select>
+				  </td>
+		 </tr>	
+		 
+		  <tr>
+		      <td class="left"> Phone </td>
+			  <td>
+			      <input type="text" name="txtP" id="txtP"   size="40" required
+				  pattern="[7-9][0-9]{9}" placeholder="Enter your Phone numnber"
+				  maxlength="10" required/>
+
+			  </td>
+		 </tr>	
+		 
+		  <tr>
+		      <td> E-mail </td>
+			  <td class="left">
+			      <input type="email"  name="txtEM" size="40" maxlength="40" required
+				  id="txtEM" placeholder="Enter Your E-Mail Address"/>
+			  </td>
+		 </tr>		
+
+		 <tr>
+		      <td> Preffered Way to contact you? </td>
+			  <td class="left">
+			      <input type="radio" name="contact" value="E-mail" > E-mail
+                  <input type="radio" name="contact" value="Phone"> Phone
+                  <input type="radio" name="contact" value="Postal Mail"> Postal Mail
+			  </td>
+		 </tr>	
+		 
+		 <tr>
+		    <td>Date of Visit </td>
+			<td><input type="date" id="txtD" name="txtD"  />
+			</td>
+		</tr>
+		
+		<tr>
+		      <td class="left"> Please describe the incident </td>
+			  <td>
+			      <textarea row="155" cols="40" name="txtI" required 
+				  id="txtI" >
+				  </textarea>
+			  </td>
+		 </tr> 
+		 <br />
+		 <tr>
+		<td  align="right"><input type="submit" value="Submit" class="btn"  />
+		</td>
+		<td colspan="2"> <input type="submit" value="Preview" ONCLICK="Preview(this.form)" class="btn" />
+		</td>
+		<tr>

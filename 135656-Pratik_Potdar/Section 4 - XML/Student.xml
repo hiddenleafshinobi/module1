@@ -1,0 +1,60 @@
+<StudentInfo>   <!--Root Element-->
+	
+	<Student No='1001'>   <!--Child Element-->
+		 <!--Grand Child Element-->
+		 <StudName>Rahul</StudName>
+		 <Phone>2456789</Phone>
+		 <Address>Mumbai</Address>
+		 <DeptNo>10</DeptNo>
+	</Student>
+	
+	<Student No='1002'>   <!--Child Element-->
+		 <!--Grand Child Element-->
+		 <StudName>Sanjay</StudName>
+		 <Phone>2678923</Phone>
+		 <Address>Pune</Address>
+		 <DeptNo>20</DeptNo>
+	</Student>
+	
+		
+	<Student No='1003'>   <!--Child Element-->
+		 <!--Grand Child Element-->
+		 <StudName>Ritish</StudName>
+		 <Phone>2676763</Phone>
+		 <Address>Mumbai</Address>
+		 <DeptNo>30</DeptNo>
+	</Student>
+	
+	<Student No='1004'>   <!--Child Element-->
+		 <!--Grand Child Element-->
+		 <StudName>Sai</StudName>
+		 <Phone>2565758</Phone>
+		 <Address>Bangalore</Address>
+		 <DeptNo>10</DeptNo>
+	</Student>
+	
+	<Student No='1005'>   <!--Child Element-->
+		 <!--Grand Child Element-->
+		 <StudName>Ravi</StudName>
+		 <Phone>2787975</Phone>
+		 <Address>Chennai</Address>
+		 <DeptNo>20</DeptNo>
+	</Student>
+	
+	<Student No='1006'>   <!--Child Element-->
+		 <!--Grand Child Element-->
+		 <StudName>Kalai</StudName>
+		 <Phone>2345678</Phone>
+		 <Address>Chennai</Address>
+		 <DeptNo>30</DeptNo>
+	</Student>
+	
+	<Student No='1007'>   <!--Child Element-->
+		 <!--Grand Child Element-->
+		 <StudName>Sonal</StudName>
+		 <Phone>2987654</Phone>
+		 <Address>Mumbai</Address>
+		 <DeptNo>20</DeptNo>
+	</Student>
+	
+</StudentInfo>

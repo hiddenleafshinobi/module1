@@ -1,0 +1,63 @@
+/*********************************************************************
+ * File                 : atm.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Program to display atm transcations
+ * Version              : 1.0
+ * Last Modified Date   : 12-September-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+BEGIN
+	DECLARE account_no AS INTEGER
+	DECLARE customer_name AS STRING
+	DECLARE current_balance AS INTEGER
+	DECLARE withdrawal AS INTEGER 
+	
+	PROMPT "Enter Account Number" AND STORE IN account_no
+		IF(isvalid(account_no)) THHN
+			PROMPT "Enter Customer Name" AND STORE IN customer_name
+
+			PROMPT "Withdrawal amount is" AND STORE IN withdrawal
+				IF(isValid(withdrawal)) THEN
+					withdrawCash(withdrawal,current_balance)
+				ELSE
+		     			 PRINT "Amount only contains digits"
+				END IF
+		ELSE
+			PRINT "Invalid Account NUmber"
+		END IF
+
+END
+
+/*********************************************************************
+* Module Name         : isValid()
+* Input Parameters    : data
+* Return Type         : BOOLEAN
+* Author              : Pratik Potdar
+* Creation Date       : 12-September-2017
+* Description         : To validate data for accepting only digits 
+*********************************************************************/
+
+SUB BOOLEAN isValid(data)
+	IF(isDigits(data)) THEN
+		RETURN true
+	ELSE	
+		RETURN false
+	END IF
+END SUB
+
+/*********************************************************************
+* Module Name         : isValid()
+* Input Parameters    : INTEGER
+* Return Type         : STRING
+* Author              : Pratik Potdar
+* Creation Date       : 12-September-2017
+* Description         : To validate data for accepting only digits 
+*********************************************************************/
+
+SUB INTEGER withdrawCash(INTEGER withdrawal,current_balance)
+	IF(current_balance > withdrawal)
+ 		PRINT "Transaction is successfull"
+	ELSE
+		PRINT "Sorry! You don't have enough credit balance"
+	END IF
+END SUB

@@ -1,0 +1,25 @@
+table{
+	margin:0 auto;
+}
+.form1{
+	border:1px solid black;
+
+}
+h1{
+	height:50px;
+	border:1px solid white;
+	text-align:center;
+	 background-color:black;
+	 font-family:Arial;
+	font-size:40px;
+	color:white;
+	}
+
+	.left{
+		text-align:justified;
+	}
+	
+	.btn{
+		background-color:black;
+		color:white;
+	}
