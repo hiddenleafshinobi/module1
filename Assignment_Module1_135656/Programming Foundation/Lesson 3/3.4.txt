@@ -1,0 +1,25 @@
+*********************************************************************
+ * File                 : 3.4.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Answer the following questions based on algorithm
+ * Version              : 1.0
+ * Last Modified Date   : 26-AUGUST-2016
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+ALGORITHM Sum(n)
+//Input: A nonnegative integer n
+sum?0
+for index?1 to n do
+	sum?sum+i
+return sum
+
+
+
+1)	What does the above algorithm compute?
+Answer: The above algorithm will do addition of first n number of positive integers.
+
+2)	What is the efficiency class of the given algorithm?
+Answer: In the above algorithm for loop used is executing n times, so the time and space complexity is 0(n).
+        Class is Linear. 
+

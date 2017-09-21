@@ -1,0 +1,13 @@
+Classes :
+1. University(niversity_name,universitry_dean)
+2. Courses(course_code,course_name,cource_duration)
+3. Section(section_id,section_name,prof_id,course_code)
+4. Professor(prof_i,prof_name,prof_exp, prof_qualification)
+5. Students(student_id,student_name, test_type,marks,grade)
+
+objects for classes:
+discrete matematics, database, information system, islamic, history
+
+objects for section :
+discrete matematics course : graph theory information system course : ORDBMS, OLAP and distribtuded system
+ 

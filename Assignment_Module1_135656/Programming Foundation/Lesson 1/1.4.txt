@@ -1,0 +1,33 @@
+*********************************************************************
+ * File                 : 1.4.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : ARMSTRONG NUMBER
+ * Version              : 1.0
+ * Last Modified Date   : 02-SEPTEMBER-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN
+		DECLARE number AS INTEGER
+		DISPLAY "Enter a number"
+		ACCEPT number
+		DECLARE check AS INTEGER
+		INITIALIZE check TO number
+		DECLARE reminder AS INTEGER
+		INITIALIZE reminder TO 0
+		DECLARE sum AS INTEGER
+		INITIALIZE value TO 10
+		
+		WHILE(check IS NOT EQUAL TO 0)
+			reminder = check % value
+			sum = sum + (reminder * reminder * reminder)
+			check = check/value
+        END WHILE
+        
+		IF sum EQUAL TO number
+			PRINT"It is Armstrong number"
+		ELSE
+			PRINT "It is not Armstrong number"
+		END IF
+END
+		

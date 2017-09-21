@@ -1,0 +1,39 @@
+/*********************************************************************
+ * File                 : 2.1.2.txt
+ * Author Name          : Praik Potdar
+ * Desc                 : Program to search Tag Colour 
+ * Version              : 1.0
+ * Last Modified Date   : 24-AUGUST-2016
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN 
+      DECLARE experience AS DECIMAL
+	  DECLARE tag_colour AS STRING
+	  PROMPT "Enter Year of Experience" AND STORE IN experience
+	  tag_colour = search_tag_colour(tag_colour)
+	  DISPLAY "Tag Colour is ",tag_colour
+END
+
+/*********************************************************************
+* Module Name         : search_tag_colour
+* Input Parameters    : tag_colour
+* Return Type         : STRING
+* Author              : Praik Potdar
+* Creation Date       : 24-AUGUST-2016
+* Description         : Program to search Tag Colour  
+ *********************************************************************/
+DECIMAL SUB search_tag_colour(STRING tag_colour)
+         IF (experience<0 OR experience>50)
+	      PRINT "Invalid Case"
+	 ELSE IF (experience<3)
+	      tag_colour = "Blue"
+	 ELSE IF (experience<5)
+	      tag_colour = "Grey"
+	 ELSE IF (experience<10)
+	      tag_colour = "Yellow"
+	 ELSE
+	      tag_colour = "Red"
+	 ENDIF
+	 RETURN tag_colour
+	 END SUB 

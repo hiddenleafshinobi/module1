@@ -1,0 +1,31 @@
+/*********************************************************************
+ * File                 : 2.1.5.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Program to find product price
+ * Version              : 1.0
+ * Last Modified Date   : 24-AUGUST-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+ 
+BEGIN 
+      DECLARE PRODUCT_PRICE, TAX_RATE, TOTAL_PRICE AS DECIMAL
+	  PROMPT "ENTER PRICE OF PRODUCT" AND STORE IN PRODUCT_PRICE
+	  PROMPT "ENTER THE RATE OF TAX" AND STORE IN TAX_RATE
+	  TOTAL_PRICE = Calculate_Product_Price(PRODUCT_PRICE, TAX_RATE, TOTAL_PRICE)
+	  DISPLAY "THE TOTAL PRICE OF PRODUCT IS",TOTAL_PRICE
+END
+	  
+/*********************************************************************
+* Module Name         : Calculate_Product_Price
+* Input Parameters    : PRODUCT_PRICE, TAX_RATE, TOTAL_PRICE
+* Return Type         : DECIMAL 
+* Author              : Praik Potdar
+* Creation Date       : 24-AUGUST-2016
+* Description         : Program to Smallest Number
+ *********************************************************************/	 
+	  DECIMAL SUB Calculate_Product_Price(DECIMAL PRODUCT_PRICE, TAX_RATE, TOTAL_PRICE)
+	  TOTAL_PRICE=PRODUCT_PRICE*TAX_RATE
+	  RETURN TOTAL_PRICE
+	  END SUB
+	 
+	 

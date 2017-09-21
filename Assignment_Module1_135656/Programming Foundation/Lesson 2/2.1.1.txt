@@ -1,0 +1,57 @@
+/*********************************************************************
+ * File                 : 2.1.1.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Program to calculate electricity bill
+ * Version              : 1.0
+ * Last Modified Date   : 23-AUGUST-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+BEGIN 
+
+     DECLARE User_ID AS INTEGER
+     DECLARE user_Name AS STRING
+     DECLARE last_reading AS DECIMAL
+     DECLARE current_reading AS DECIMAL
+     DECLARE unit_consumed AS DECIMAL
+     DECLARE CONSTANT fixed_charge = 100
+     DECLARE CONSTANT rate = 1.15
+     DECLARE Net_Amount AS DECIMAL
+     PROMPT "Enter User ID" AND STORE IN User_ID
+     PROMPT "Enter User Name" AND STORE IN User_Name
+     PROMPT "Enter Last Month Reading" AND STORE IN last_reading
+     PROMPT "Enter Current Month Reading" AND STORE IN current_reading
+     CALCULATE unit_consumed = CALL Print_Consumed_Unit(DECIMAL last_reading, DECIMAL current_reading)
+     CALCULATE Net_Amount = CALL Print_Net_Amount(DECIMAL Unit_Consumed, DECIMAL rate, DECIMAL fixed_charge)
+     DISPLAY "User ID",User_ID
+     DISPLAY "User Name",User_Name
+     DISPLAY "Unit Consumed",unit_consumed
+     DISPLAY "Net amount",Net_Amount
+
+END
+/*********************************************************************
+* Module Name         : Print_Consumed_Unit
+* Input Parameters    : DECIMAL last_reading, DECIMAL current_reading
+* Return Type         : DECIMAL
+* Author              : Pratik Potdar
+* Creation Date       : 23-AUGUST-2017
+* Description         : Program to calculate electricity bill
+ *********************************************************************/
+DECIMAL SUB Print_Consumed_Unit(DECIMAL last_reading, DECIMAL current_reading)
+            DECLARE Unit_Consumed AS DECIMAL
+            Unit_Consumed = current_reading - last_reading
+			RETURN Unit_consumed 
+			END SUB
+			
+/*********************************************************************
+* Module Name         : Print_Net_Amount
+* Input Parameters    : DECIMAL Unit_Consumed, DECIMAL rate, DECIMAL fixed_charge
+* Return Type         : DECIMAL
+* Author              : Pratik Potdar
+* Creation Date       : 23-AUGUST-2017
+* Description         : Program to calculate electricity bill
+ *********************************************************************/			
+DECIMAL SUB Print_Net_Amount(DECIMAL Unit_Consumed, DECIMAL rate, DECIMAL fixed_charge)
+            DECLARE Net_Amount = Unit_Consumed*rate+fixed_charge
+			RETURN Net_Amount
+			END SUB
+            			

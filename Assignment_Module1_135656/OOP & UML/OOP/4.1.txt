@@ -1,0 +1,43 @@
+Main Class :
+ ==========
+ 
+	Phone
+________________________________________________________
+
+Concrete class Generalization(Inherits) Main Class(Phone):
+=========================================================
+
+___________________________ 
+MessageDetails
+___________________________ 
+
+sender_Details
+receiver_Details
+content_size
+___________________________
+
+getMessageDetails()
+setMessageDetails()
+___________________________
+
+
+_________________________________________________________
+
+Abstract Class:
+================
+
+___________________________
+
+Rendering_Process
+___________________________
+___________________________
+___________________________
+
+Polymorphic Metods:
+=======================
+Recive_Message(Text, Message)
+Recive_Message(Audio Message)
+Recive_Message(Voice Message)
+Recive_Message(Multimedia Message)
+
+_________________________________________________________

@@ -1,0 +1,44 @@
+/*********************************************************************
+ * File                 : 4.3.txt
+ * Author Name          : Capgemini
+ * Desc                 : Calculate Total cost of product
+ * Version              : 1.0
+ * Last Modified Date   : 02-SEPT-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+BEGIN 
+      DECLARE product_price,total_cost AS DECIMAL
+      DECLARE quantity AS INTEGER
+      DECLARE CONSTANT tax_rate=0.56
+      INITIALIZE total_cost TO 0.0
+      DISPLAY "Enter price of your product"
+      ACCEPT product_price
+      IF(isvalid(price)) THEN 
+                         DISPLAY "Enter quantity of your product"
+                         ACCEPT quantity
+                                    IF(isvalid(quantity)) THEN
+                                    CALCULATE total_cost = product_price*quantity*tax_rate
+                                    DISPLAY "Total price of product is:",total_cost
+                         ELSE
+                                    DISPLAY "The quantity should be in numbers"
+                         END IF
+                          ELSE
+                                    DISPLAY"The price should be in numbers"
+                          END IF
+END
+
+/*********************************************************************
+* Module Name         : isvalid(data)
+* Input Parameters    : Boolean
+* Return Type         : String
+* Author              : Capgemini
+* Creation Date       : 02-SEPT-2017
+* Description         : Calculate Total cost of product
+ *********************************************************************/
+SUB isvalid(data)
+         IF(isDigital(data)) THEN
+            RETURN true
+         ELSE
+             RETURN false
+         END IF
+END SUB 

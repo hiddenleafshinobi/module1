@@ -1,0 +1,22 @@
+/*********************************************************************
+ * File                 : 3.2.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Answer based on algorithm
+ * Version              : 1.0
+ * Last Modified Date   : 05-SEPTEMBER-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+3.2	Determine the output of below given algorithm by tracing it for the taking any sample input.
+ALGORITHM surprise(A[0..n-1])
+//Input: An array A[0..n-1] of real numbers
+If n=1 
+     return A[0]
+else 
+     t?surprise(A[0..n-2]) 
+     if t<=A[n-1] 
+           return t
+     else 
+           return A[n-1]
+Ans: The algorithm is finding the smallest number and saving it in variable t,
+     by backtraping the algorithm we can see that the smallest number being saved in variable t.

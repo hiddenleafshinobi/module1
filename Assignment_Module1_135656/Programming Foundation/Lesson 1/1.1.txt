@@ -1,0 +1,31 @@
+/*********************************************************************
+ * File                 : 1.1.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Program to generate elecricity bill 
+ * Version              : 1.0
+ * Last Modified Date   : 22-August-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN 
+
+     DECLARE User_ID AS INTEGER
+     DECLARE user_Name AS STRING
+     DECLARE last_reading AS DECIMAL
+     DECLARE current_reading AS DECIMAL
+     DECLARE unit_consumed AS DECIMAL
+     DECLARE CONSTANT fixed_charge = 100
+     DECLARE CONSTANT rate = 1.15
+     DECLARE Net_Amount AS DECIMAL
+     PROMPT "Enter User ID" AND STORE IN User_ID
+     PROMPT "Enter User Name" AND STORE IN User_Name
+     PROMPT "Enter Last Month Reading" AND STORE IN last_reading
+     PROMPT "Enter Current Month Reading" AND STORE IN current_reading
+     CALCULATE unit_consumed = current_reading - last_reading
+     CALCULATE Net_Amount = unit_consumed * rate + fixed_charge
+     DISPLAY "User ID",User_ID
+     DISPLAY "User Name",User_Name
+     DISPLAY "Unit Consumed",unit_consumed
+     DISPLAY "Net amount",Net_Amount
+
+END

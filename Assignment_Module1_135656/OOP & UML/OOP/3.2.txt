@@ -1,0 +1,24 @@
+ Association
+ ===========
+ 
+ card Association Red/Black
+ 
+ Generalization
+ ==============
+ Diamonds
+ Hearts
+ 
+ Classes Inherit Red Card
+ 
+ Spade
+ Clover
+ Club
+ 
+ Classes Inherit Black Card
+ 
+ And
+ 
+ card K(king) Inherit card class
+ card J(king) Inherit card class
+ card A(king) Inherit card class
+ 

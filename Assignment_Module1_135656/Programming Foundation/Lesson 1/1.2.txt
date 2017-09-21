@@ -1,0 +1,28 @@
+/*********************************************************************
+ * File                 : 1.2.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Program to find tag colour as per year of experience 
+ * Version              : 1.0
+ * Last Modified Date   : 22-August-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN 
+
+      DECLARE experience AS DECIMAL
+      DECLARE tag_color AS STRING
+      DISPLAY "Enter the year of experience" accept experience
+             IF(experience<0 AND experience>50)
+                 DISPLAY "Invalid Case."
+             ELSE IF(experience<3)
+                 tag_color = "Blue"
+             ELSE IF(experience<5)
+                 tag_color =  "Grey"
+             ELSE IF(experience<10)
+                 tag_color = "Yellow"
+             ELSE
+                 tag_color = "Red"
+             END IF
+      DISPLAY " THE TAG COLOUR IS ",tag_color
+
+END

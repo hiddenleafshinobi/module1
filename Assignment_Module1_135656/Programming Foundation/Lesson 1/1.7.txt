@@ -1,0 +1,19 @@
+/*********************************************************************
+ * File                 : 1.7.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Perfecting a pseudo code
+ * Version              : 1.0
+ * Last Modified Date   : 22-August-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN 
+
+     DECLARE PRODUCT_PRICE, TOTAL_PRICE AS DECIMAL
+     DECLARE CONSTANT TAX_RATE = 0.56
+     INITIALIZE TOTAL_PRICE = 0
+     PROMPT "Enter price of your product" AND STORE IN PRODUCT_PRICE
+     TOTAL_PRICE = PRODUCT_PRICE * TAX_RATE
+     DISPLAY "Total price of product is ", TAX_RATE
+
+END

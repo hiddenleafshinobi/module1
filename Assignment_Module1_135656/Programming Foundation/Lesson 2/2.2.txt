@@ -1,0 +1,59 @@
+/*********************************************************************
+ * File                 : 2.2.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : accept pseudo code and return sum
+ * Version              : 1.0
+ * Last Modified Date   : 05-SEPTEMBER-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN
+	 DECLARE number AS INTEGER
+	 DECLARE array[20] AS INTEGER ARRAY
+	 DECLARE sum AS INTEGER
+	 INITIALIZE sum TO 0
+	 DECLARE index AS INTEGER
+	 INITIALIZE index TO 0
+	 
+	 PROMPT"Enter the number" AND STORE IN number
+	 array[]=digit_arr(number)
+	 sum=calc_sum(array[],index)
+END
+
+
+/*********************************************************************
+* Module Name         : digit_arr
+* Input Parameters    : number
+* Return Type         : INTEGER
+* Author              : Praik Potdar
+* Creation Date       : 05-SEPTEMBER-2017
+* Description         : accept pseudo code and return sum
+ *********************************************************************/
+INTEGER SUB digit_arr(INTEGER number)
+		DECLARE number1 AS INTEGER
+		  WHILE(number != 0)
+			number1 = number%10
+			number = number/10
+			array[index]=number1
+			index=index+1
+		  END WHILE
+		RETURN array[]
+END SUB
+
+/*********************************************************************
+* Module Name         : calc_sum
+* Input Parameters    : array[],index
+* Return Type         : INTEGER
+* Author              : Praik Potdar
+* Creation Date       : 05-SEPTEMBER-2017
+* Description         : accept pseudo code and return sum
+ *********************************************************************/
+INTEGER SUB calc_sum(INTEGER array[], INTEGER index)
+		DECLARE index1 AS INTEGER
+		INITIALIZE index1 TO 0
+		  WHILE(index1 <= index)
+		     sum=sum+array[index]
+			 index1=index1+1
+		  END WHILE
+		RETURN SUM
+END SUB

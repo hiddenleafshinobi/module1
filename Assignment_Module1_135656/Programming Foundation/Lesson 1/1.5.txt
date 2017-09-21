@@ -1,0 +1,30 @@
+/*********************************************************************
+ * File                 : 1.5.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : CONVERT BINARY NUMBER TO DECIMAL
+ * Version              : 1.0
+ * Last Modified Date   : 02-SEPTEMBER-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+BEGIN
+	  DECLARE number AS INTEGER
+	  DECLARE binary_val AS INTEGER
+	  DECLARE decimal_val AS INTEGER
+	  INITIALIZE decimal_val TO 0
+	  DECLARE base AS INTEGER
+	  INITIALIZE base TO 0
+	  DECLARE reminder AS INTEGER
+	  PROMPT "Enter a binary number" AND STORE IN number
+	  binary_val = number
+	  WHILE(number > 0)
+	  {
+			reminder = number%10;
+			decimal_val = decimal_val + reminder * base;
+			number = number/10;
+			base = base * 2;
+	  }
+	  END WHILE
+	  DISPLAY("The binary number is:",binary_val);
+	  DISPLAY("The decimal number is: ",decimal_val);
+END
+			

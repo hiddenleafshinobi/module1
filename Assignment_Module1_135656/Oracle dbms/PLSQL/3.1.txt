@@ -1,0 +1,17 @@
+CREATE OR REPLACE FUNCTION vin(input IN date)
+RETURN NUMBER IS
+age NUMBER(10);
+BEGIN
+SELECT ((sysdate-input)/365) into age from dual;
+RETURN age;
+END;
+/
+
+DECLARE
+e_input DATE:= '&e_input';
+var number(10);
+BEGIN
+var := vin(e_input);
+dbms_output.put_line(var);
+END;
+/

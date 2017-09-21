@@ -1,0 +1,39 @@
+*********************************************************************
+ * File                 : 3.6.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : To accept 5 numbers
+ * Version              : 1.0
+ * Last Modified Date   : 04-SEPTEMBER-2016
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN
+	 DECLARE word AS STRING
+	 ACCEPT word
+	 DECLARE char_search AS CHAR
+	 ACCEPT char_search 
+	 INITIALIZE index To 0
+	 DECLARE counter AS INTEGER
+	 counter = count_occurance(word,char_search)
+	 DISPLAY "The No. of occurance char in word is:",counter
+/*********************************************************************
+* Module Name         : count_occurance
+* Input Parameters    : CHAR char_search
+* Return Type         : INTEGER
+* Author              : Praik Potdar
+* Creation Date       : 04-SEPTEMBER-2016
+* Description         : Program to search Tag Colour  
+ *********************************************************************/	 
+	 
+	 INTEGER SUB count_occurance(STRING word, CHAR char_search)
+	 INITIALIZE counter TO 0
+	 DECLARE constant AS INTEGER
+	 INITIALIZE constant TO 1
+	 FOR index = 0 TO string_length(STRING word)
+		IF(word[index] == char_search)
+		   counter = counter + constant
+		END IF
+	 END FOR
+	 RETURN counter
+	 END SUB
+END

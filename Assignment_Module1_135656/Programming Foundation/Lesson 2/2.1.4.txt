@@ -1,0 +1,58 @@
+*********************************************************************
+ * File                 : 2.1.4.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Program to find Even OR Odd Number
+ * Version              : 1.0
+ * Last Modified Date   : 26-AUGUST-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN
+      DECLARE NUMBER[10],EVEN[10],ODD[10] AS INTEGER ARRAY
+	  DECLARE EVENNO, ODDNO AS INTEGER
+	  DECLARE SEARCH AS BOOLEAN
+	  INITIALIZE EVENNO,ODDNO TO 0
+	  
+	  FOR INDEX 0 TO 9
+	  ACCEPT NUMBER[INDEX]
+	  END FOR
+	  
+	  FOR INDEX 0 TO 9
+	  SEARCH = Search_Even_OR_Odd(NUMBER[INDEX])
+	     IF(SEARCH=TRUE)
+	         EVEN[EVENNO]=NUMBER[INDEX]
+	         INCREMENT EVENNO
+	     ELSE
+	         ODD[ODDNO]=NUMBER[INDEX]
+	         INCREMENT ODDNO
+	     END IF
+	  END FOR
+	  
+	  DISPLAY "Even Numbers"
+      FOR INDEX 0 TO 9
+           DISPLAY EVEN[EVENNO]
+      END FOR	  
+      
+	  DISPLAY "Odd Numbers"
+      FOR INDEX 0 TO 9
+          DISPLAY ODD[ODDNO]
+      END FOR	  
+
+END
+
+/*********************************************************************
+* Module Name         : Search_Even_OR_Odd
+* Input Parameters    : NUMBER[INDEX]
+* Return Type         : BOOLEAN
+* Author              : Praik Potdar
+* Creation Date       : 26-AUGUST-2016
+* Description         : Program to Smallest Number
+ *********************************************************************/	 
+
+BOOLEAN SUB Search_Even_OR_Odd(INTEGER ARRAY NUMBER[INDEX])
+        IF(NUMBER[INDEX]%2==0)
+		RETURN TRUE
+		ELSE
+		RETURN FALSE
+        END IF
+        END SUB

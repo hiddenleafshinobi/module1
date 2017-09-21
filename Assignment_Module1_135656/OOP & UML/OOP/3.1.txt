@@ -1,0 +1,9 @@
+Dependancy/Generalization
+ 
+ orders class(Derived class) Inherit Products(Base Class)
+ 
+ Aggregation
+ 
+ one customer can have multiple orders
+ one order can have multiple products
+ one order must have one customer

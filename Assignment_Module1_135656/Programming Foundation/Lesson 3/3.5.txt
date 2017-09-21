@@ -1,0 +1,27 @@
+*********************************************************************
+ * File                 : 3.5.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Program to search an character in word
+ * Version              : 1.0
+ * Last Modified Date   : 26-AUGUST-2016
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN
+      DECLARE word[100] AS CHARACTER ARRAY
+      DECLARE search_char AS STRING
+      DECLARE occurance AS INTEGER
+      DECLARE CONSTANT sum = 1;
+      INITIALIZE occurance TO 0
+      PROMPT "Enter the word:" AND STORE IN word
+      PROMPT "Enter Character to be Searched" AND STORE IN search_char
+      
+      FOR INDEX 0 TO 99
+          IF( word[index] = search_char)
+             THEN CALCULATE occurance = occurance + sum
+          END IF
+      END FOR
+      DISPLAY "The number of occurance of Character in word is:",occurance
+END
+
+          

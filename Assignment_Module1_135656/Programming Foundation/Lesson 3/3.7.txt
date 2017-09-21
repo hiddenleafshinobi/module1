@@ -1,0 +1,65 @@
+/*********************************************************************
+ * File                 : 3.7.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Accept two strings
+ * Version              : 1.0
+ * Last Modified Date   : 05-SEPTEMBER-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN
+	 DECLARE first,second AS STRING
+	 PROMPT "Enter first string" AND STORE IN first
+	 PROMPT "Enter second string" AND STORE IN second
+	 IF(issubstring(first,second)
+	 THEN
+	 DISPLAY "second string is sub string of first string"
+	 ELSE
+	 DISPLAY "second string is not sub string of first string"
+	 END IF
+END
+
+/*********************************************************************
+* Module Name         : issubstring
+* Input Parameters    : string
+* Return Type         : string
+* Author              : Pratik Potdar
+* Creation Date       : 05-SEPTEMBER-2017
+* Description         : Accept two strings
+ *********************************************************************/
+
+BOOLEAN SUB issubstring(string first,second)
+DECLARE index AS INTEGER
+INITIALIZE index TO 0
+WHILE (first(index) !=EOF)
+DO
+IF(first(index)==second(0))
+THEN
+IF(isInsequence(second,first,index))
+THEN
+RETURN TRUE
+EBD IF 
+END IF
+
+index = index+1
+END WHILE
+RETURN FALSE
+END SUB
+
+/*********************************************************************
+* Module Name         : isInsequence
+* Input Parameters    : string
+* Return Type         : string
+* Author              : Pratik Potdar
+* Creation Date       : 05-SEPTEMBER-2017
+* Description         : Accept two strings
+ *********************************************************************/
+BOOLEAN SUB isInsequence(STRING second,STRING first,INTEGER index)
+DECLARE index AS INTEGER
+WHILE (second(index != EOF)
+DO
+IF(second(index) != first(index))
+RETURN false
+END WHILE
+RETURN TRUE
+

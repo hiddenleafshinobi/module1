@@ -1,0 +1,45 @@
+/*********************************************************************
+ * File                 : 4.2.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : calculate Total leaves
+ * Version              : 1.0
+ * Last Modified Date   : 02-SEPT-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+RECORD Employee
+	DECLARE Emp_ID AS INTEGER
+	DECLARE Employment_Type AS STRING
+END RECORD
+
+BEGIN
+	DECLARE CONSTANT permanent_leaves = 2
+	DECLARE CONSTANT contract_leaves = 1
+	DECLARE Emp AS Employee 
+	DECLARE leaves,total_leaves AS INTEGER
+ 	DECLARE CONSTANT index1 = 5
+	DECLARE CONSTANT year = 12
+	FOR index = 1 TO INDEX1
+		PROMPT "Enter Employee Type" AND STORE IN Emp.Emp_ID
+		IF (isvalid(Emp_ID)) THEN
+			PROMPT "Enter the Employee type:" AND STORE IN Emp.Employmnt_Type
+			IF (isvalid(Employment_Type)) THEN
+				Leaves_Allocated(Employment_Type);
+			ELSE
+				PRINT "Invalid Employee Type"
+			END IF
+		ELSE
+			PRINT "Invalid Employee ID"
+		END IF
+	END FOR
+END
+		 
+INTEGER SUB Leaves_Allocated(STRING Emp.Employment_Type)
+	IF (typefound(Emp.EmploymentType)) THEN
+		IF(Emp.Employment_Type == 'PERMANENT') THEN
+			leaves = permanent_leaves;
+		ELSE 
+			leaves = contract_leaves;
+		END IF
+		CALCULATE Total_Leaves = leaves*months;
+		RETURN Total_Leaves

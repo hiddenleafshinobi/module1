@@ -1,0 +1,10 @@
+DECLARE 
+e_com emp.comm%TYPE;
+BEGIN
+SELECT comm into e_com from emp where empno=7369;
+dbms_output.put_line(e_com);
+
+EXCEPTION
+WHEN NO_DATA_FOUND THEN('No commision found');
+END;
+/

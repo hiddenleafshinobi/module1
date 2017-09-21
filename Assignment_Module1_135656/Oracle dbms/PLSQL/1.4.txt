@@ -1,0 +1,16 @@
+DECLARE
+e_no emp.empno%TYPE;
+e_name emp.ename%TYPE;
+e_job emp.job%TYPE;
+e-mgr emp.mgr%TYPE;
+e_hiredate emp.hiredate%TYPE;
+e_sal emp.sal%TYPE;
+e_com emp.comm%TYPE;
+e_dno emp,deptno%TYPE;
+
+BEGIN
+SELECT e1.empno,e1.ename,e1.job,e1.mgr,e1.hiredate,e1.sal,e1.comm,e1.deptno INTO
+e_no,e_name,e_job,e-mgr,e_hiredate,e_sal,e_com,e_dno FROM emp WHERE empno=7369;
+dbms_output.put_line(e_no || e_name || e_job || e-mgr || e_hiredate || e_sal || e_com || e_dno );
+END;
+/

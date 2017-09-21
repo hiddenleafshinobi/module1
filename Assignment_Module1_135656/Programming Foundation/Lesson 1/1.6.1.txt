@@ -1,0 +1,28 @@
+/*********************************************************************
+ * File                 : 1.6.1txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Program to find smallest number 
+ * Version              : 1.0
+ * Last Modified Date   : 22-August-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+
+BEGIN
+
+      DECLARE number[10] AS INTEGER ARRAY
+      DECLARE min AS INTEGER
+
+      FOR (index = 0 to 9)
+          INITIALIZE min = number[index]
+      END FOR
+    
+      FOR(index=0 index=<9 index++)
+         IF(number[index]<min)
+            THEN min=number[index]
+         END IF
+      END FOR
+      DISPLAY "The Smallest Number is",min
+     
+END
+

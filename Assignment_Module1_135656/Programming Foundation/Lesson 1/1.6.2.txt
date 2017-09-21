@@ -1,0 +1,41 @@
+/*********************************************************************
+ * File                 : 1.6.2.txt
+ * Author Name          : Pratik Potdar
+ * Desc                 : Program to find odd and even numbers
+ * Version              : 1.0
+ * Last Modified Date   : 22-August-2017
+ * Change Description   : Description about the changes implemented
+ *********************************************************************/
+
+BEGIN
+
+        DECLARE number[10] AS INTEGER ARRAY
+        DECLARE odd[10], even[10] AS INTEGER ARRAY
+        DECLARE evenno,oddno AS INTEGER
+        INITIALIZE evenno, oddno to 0
+        
+        FOR(index = 0 to 9)
+        ACCEPT number[10]
+        END FOR
+       
+        FOR(index = 0 to 9)
+           IF(number[index]%2==0)
+              THEN even[eveneno]=number[index]
+              INCREMENT evenno
+           ELSE
+               odd(oddno)=number[index]
+               INCREMENT oddno
+           END IF
+        END FOR
+       
+        DISPLAY "Even Numbers"
+        FOR (index = 0 to evenno)
+             PRINT even[index]
+        END FOR
+
+        DISPLAY "Odd Numbers"
+        FOR (index = 0 to oddno)
+             PRINT odd[index]
+        END FOR
+      
+END     
